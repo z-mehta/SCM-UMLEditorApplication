@@ -17,7 +17,7 @@ import com.horstmann.violet.product.diagram.abstracts.node.INode;
 import com.horstmann.violet.workspace.editorpart.IEditorPart;
 import com.horstmann.violet.workspace.editorpart.IEditorPartBehaviorManager;
 import com.horstmann.violet.workspace.editorpart.IEditorPartSelectionHandler;
-
+	
 public class ShowMenuOnRightClickBehavior extends AbstractEditorPartBehavior
 {
 
@@ -181,6 +181,17 @@ public class ShowMenuOnRightClickBehavior extends AbstractEditorPartBehavior
         });
         aPopupMenu.add(selectAll);
         
+///     Code added
+     links.addActionListener(new ActionListener()
+     {
+         public void actionPerformed(ActionEvent event)
+         {
+             new GetLinksBehaviour(editorPart).getLinksForNode();
+         }
+     });
+     aPopupMenu.add(links);
+///      
+        
         return aPopupMenu;
     }
     
@@ -213,6 +224,11 @@ public class ShowMenuOnRightClickBehavior extends AbstractEditorPartBehavior
 
     @ResourceBundleBean(key = "edit.select_all")
     private JMenuItem selectAll;
+    
+//  Code added
+ @ResourceBundleBean(key = "edit.links")
+ private JMenuItem links;
+//  
     
     private IEditorPart editorPart;
 
