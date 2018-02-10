@@ -334,14 +334,7 @@ public static boolean enable, enable1, enable2;
                 edges.add(e);
 
 
-                //checking for existing recursive edge in graph - Validation
-                for (int x=0; x<alNodes.size();x++){
-                    if(Collections.frequency(alNodes,alNodes.get(x)) > 1){
-                        JOptionPane.showMessageDialog(null, "Graph is Incorrect : has Invalid Recursive Relationship(s)", "Warning!", JOptionPane.WARNING_MESSAGE);
-                        break;
-                    }
-                }
-
+         
                 //adding nodes  with recursive relation to custom list
                 //for (IEdge anEdge : this.edges)
                 //{
@@ -355,6 +348,14 @@ public static boolean enable, enable1, enable2;
                 //}
 // to enable/disable feature 1
 if(enable){
+
+       //checking for existing recursive edge in graph - Validation
+                for (int x=0; x<alNodes.size();x++){
+                    if(Collections.frequency(alNodes,alNodes.get(x)) > 1){
+                        JOptionPane.showMessageDialog(null, "Graph is Incorrect : has Invalid Recursive Relationship(s)", "Warning!", JOptionPane.WARNING_MESSAGE);
+                        break;
+                    }
+                }
 
 
     if( (this.getClass().toString().endsWith("ClassDiagramGraph") && (e.getClass().toString().endsWith("AggregationEdge")
