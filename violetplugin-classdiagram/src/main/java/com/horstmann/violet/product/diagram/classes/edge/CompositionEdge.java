@@ -35,7 +35,8 @@ public class CompositionEdge extends LabeledLineEdge
         setEndArrowhead(ArrowheadChoiceList.DIAMOND_BLACK);
         setLineStyle(LineStyleChoiceList.SOLID);
     }
-
+  
+ 	
     @Override
     protected CompositionEdge copy() throws CloneNotSupportedException
     {
@@ -47,4 +48,13 @@ public class CompositionEdge extends LabeledLineEdge
     {
         return ClassDiagramConstant.CLASS_DIAGRAM_RESOURCE.getString("tooltip.composition_edge");
     }
+    
+    @Override
+	public boolean isBiDirectionalEdgeAllowed()
+    {
+        return false;
+    }
+    
+    
+    
 }

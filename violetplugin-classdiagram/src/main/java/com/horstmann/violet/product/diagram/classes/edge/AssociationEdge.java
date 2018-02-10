@@ -47,4 +47,10 @@ public class AssociationEdge extends LabeledLineEdge
     {
         return ClassDiagramConstant.CLASS_DIAGRAM_RESOURCE.getString("tooltip.association_edge");
     }
+    @Override
+    public boolean isBiDirectionalEdgeAllowed()
+    {
+        return false;
+    }
+    
 }

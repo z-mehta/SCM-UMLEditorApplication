@@ -1,5 +1,4 @@
 package com.horstmann.violet.product.diagram.classes.edge;
-
 import com.horstmann.violet.product.diagram.classes.ClassDiagramConstant;
 import com.horstmann.violet.product.diagram.property.ArrowheadChoiceList;
 import com.horstmann.violet.product.diagram.property.LineStyleChoiceList;
@@ -20,7 +19,6 @@ public class AggregationEdge extends LabeledLineEdge
         setStartArrowhead(ArrowheadChoiceList.NONE);
         setEndArrowhead(ArrowheadChoiceList.DIAMOND_WHITE);
         setLineStyle(LineStyleChoiceList.SOLID);
-
     }
 
     protected AggregationEdge(AggregationEdge cloned)
@@ -35,22 +33,23 @@ public class AggregationEdge extends LabeledLineEdge
         setStartArrowhead(ArrowheadChoiceList.NONE);
         setEndArrowhead(ArrowheadChoiceList.DIAMOND_WHITE);
         setLineStyle(LineStyleChoiceList.SOLID);
-
-
     }
 
     @Override
     protected AggregationEdge copy() throws CloneNotSupportedException
     {
-
         return new AggregationEdge(this);
-
     }
 
     @Override
     public String getToolTip()
     {
-
         return ClassDiagramConstant.CLASS_DIAGRAM_RESOURCE.getString("tooltip.aggregation_edge");
     }
+    @Override
+    public boolean isBiDirectionalEdgeAllowed()
+    {
+        return false;
+    }
+    
 }

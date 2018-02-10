@@ -51,6 +51,10 @@ public abstract class AbstractEdge implements IEdge
     {
         refreshContactPoints();
     }
+    
+   
+   
+    
 
     @Override
     public final void reconstruction()
@@ -92,6 +96,9 @@ public abstract class AbstractEdge implements IEdge
     {
         return "";
     }
+    
+  
+    
 
     @Override
     public final void setStartNode(INode startingNode)
@@ -307,7 +314,23 @@ public abstract class AbstractEdge implements IEdge
     {
         ++this.revision;
     }
-
+    
+    @Override
+    public boolean isBiDirectionalEdgeAllowed()
+    {
+        return true;
+    }
+    
+    
+    @Override
+    public boolean checkEdges(INode firstendPoint, INode secondendPoint)
+    {
+    	if(this.getStartNode().equals(secondendPoint) && this.getEndNode().equals(firstendPoint))
+    		return false;
+    	else 
+    		return true;
+    }
+    	
 
     protected void updateContactPoints()
     {
@@ -326,6 +349,8 @@ public abstract class AbstractEdge implements IEdge
             updateContactPoints();
         }
     }
+    
+    
 
     /** Points of contact path */
     protected transient Point2D[] contactPoints;

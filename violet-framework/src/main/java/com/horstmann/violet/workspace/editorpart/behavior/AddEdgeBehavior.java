@@ -1,15 +1,13 @@
 package com.horstmann.violet.workspace.editorpart.behavior;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-
-import javax.swing.SwingUtilities;
 
 import com.horstmann.violet.framework.dialog.DialogFactory;
 import com.horstmann.violet.framework.injection.bean.ManiocFramework.BeanInjector;
@@ -21,7 +19,6 @@ import com.horstmann.violet.product.diagram.abstracts.IGridSticker;
 import com.horstmann.violet.product.diagram.abstracts.Id;
 import com.horstmann.violet.product.diagram.abstracts.edge.IEdge;
 import com.horstmann.violet.product.diagram.abstracts.node.INode;
-import com.horstmann.violet.product.diagram.common.node.PointNode;
 import com.horstmann.violet.workspace.editorpart.IEditorPart;
 import com.horstmann.violet.workspace.editorpart.IEditorPartBehaviorManager;
 import com.horstmann.violet.workspace.editorpart.IEditorPartSelectionHandler;
@@ -31,7 +28,7 @@ import com.horstmann.violet.workspace.sidebar.graphtools.IGraphToolsBarMouseList
 
 public class AddEdgeBehavior extends AbstractEditorPartBehavior implements IGraphToolsBarMouseListener
 {
-
+  public static boolean Feature2=false;
     public AddEdgeBehavior(IEditorPart editorPart, IGraphToolsBar graphToolsBar)
     {
     	BeanInjector.getInjector().inject(this);
@@ -221,6 +218,22 @@ public class AddEdgeBehavior extends AbstractEditorPartBehavior implements IGrap
                 Point2D relativeStartPoint = null;
                 Point2D relativeEndPoint = null;
                 Point2D[] transitionPointsAsArray = this.transitionPoints.toArray(new Point2D[this.transitionPoints.size()]);
+                if(Feature2) {
+                if(!newEdge.isBiDirectionalEdgeAllowed())
+            	{
+        	    	Collection<IEdge> allEdges = graph.getAllEdges();
+        	    	for(IEdge edge : allEdges)
+        	    	{
+        	    		//Ignore self relationships here
+        	    		if((!startNode.equals(endNode)) && !edge.checkEdges(startNode, endNode))
+        	    		{
+        	    			this.dialogFactory.showWarningDialog(BidirectionalRelationsAreNotAllowed);
+        	    			return false;
+        	    		}
+        	    			
+        	    	}
+            	}
+                }
                 if (startNode != null)
                 {
                     Point2D startNodeLocationOnGraph = startNode.getLocationOnGraph();
@@ -331,6 +344,13 @@ public class AddEdgeBehavior extends AbstractEditorPartBehavior implements IGrap
     
     @ResourceBundleBean(key = "addedge.properties.no_drag_message")
     private String noDragMessage;
+    
+    @ResourceBundleBean(key = "addedge.properties.no_bidirectional_realtionships_message")
+    private String BidirectionalRelationsAreNotAllowed;
+    
+  
+
+    
 
 
 }

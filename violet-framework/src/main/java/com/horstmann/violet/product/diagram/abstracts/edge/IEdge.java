@@ -151,6 +151,18 @@ public interface IEdge extends Serializable, Cloneable, IIdentifiable
      */
     Direction getDirection(INode node);
 
+	
+    /**
+     * @return true if the edge supports bidirectional 
+     */
+	boolean isBiDirectionalEdgeAllowed();
+	
+    
+	/*
+	 * @return true if the end points are not allowed
+	 */
+	boolean checkEdges(INode startPoint,INode endPoint);
+
     /**
      * Draw the edge.
      * 

@@ -38,6 +38,7 @@ import com.horstmann.violet.framework.injection.resources.annotation.ResourceBun
 import com.horstmann.violet.product.diagram.abstracts.AbstractGraph;
 import com.horstmann.violet.product.diagram.abstracts.edge.IEdge;
 import com.horstmann.violet.product.diagram.abstracts.node.INode;
+import com.horstmann.violet.workspace.editorpart.behavior.AddEdgeBehavior;
 
 import static com.horstmann.violet.product.diagram.abstracts.AbstractGraph.alNodes;
 
@@ -154,11 +155,14 @@ public class HelpMenu extends JMenu
                 if (button1.isSelected()) {
                     button1.setText("Disable Feature 2");
                     // Start the action here1
-                    AbstractGraph.enable1=true;
+            //    AddEdgeBehaviour.Feature2=true;
+                    
+                    
                 } else {
                     button1.setText("Enable Feature 2");
                     // Stop the action here
-                    AbstractGraph.enable1=false;
+               //     AddEdgeBehaviour.Feature2=false;
+                    
                 }
             }
         };
