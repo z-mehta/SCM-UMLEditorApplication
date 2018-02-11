@@ -21,13 +21,20 @@
 
 package com.horstmann.violet.application.menu;
 
+import static com.horstmann.violet.product.diagram.abstracts.AbstractGraph.alNodes;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 
-import javax.swing.*;
+import javax.swing.AbstractAction;
+import javax.swing.AbstractButton;
+import javax.swing.Action;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 
 import com.horstmann.violet.application.gui.MainFrame;
 import com.horstmann.violet.application.help.AboutDialog;
@@ -36,11 +43,10 @@ import com.horstmann.violet.application.help.ShortcutDialog;
 import com.horstmann.violet.framework.injection.resources.ResourceBundleInjector;
 import com.horstmann.violet.framework.injection.resources.annotation.ResourceBundleBean;
 import com.horstmann.violet.product.diagram.abstracts.AbstractGraph;
-import com.horstmann.violet.product.diagram.abstracts.edge.IEdge;
-import com.horstmann.violet.product.diagram.abstracts.node.INode;
+import com.horstmann.violet.product.diagram.classes.edge.AggregationEdge;
+import com.horstmann.violet.product.diagram.classes.edge.AssociationEdge;
+import com.horstmann.violet.product.diagram.classes.edge.CompositionEdge;
 import com.horstmann.violet.workspace.editorpart.behavior.AddEdgeBehavior;
-
-import static com.horstmann.violet.product.diagram.abstracts.AbstractGraph.alNodes;
 
 /**
  * Help menu
@@ -155,13 +161,20 @@ public class HelpMenu extends JMenu
                 if (button1.isSelected()) {
                     button1.setText("Disable Feature 2");
                     // Start the action here1
-            //    AddEdgeBehaviour.Feature2=true;
+               AddEdgeBehavior.Feature2=true;
+               AggregationEdge.Feature2=true;
+               CompositionEdge.Feature2=true;
+               	AssociationEdge.Feature2=true;
                     
                     
                 } else {
                     button1.setText("Enable Feature 2");
                     // Stop the action here
-               //     AddEdgeBehaviour.Feature2=false;
+                 AddEdgeBehavior.Feature2=false;
+                 AggregationEdge.Feature2=false;
+                 CompositionEdge.Feature2=false;
+                 AssociationEdge.Feature2=false;
+                 
                     
                 }
             }

@@ -14,6 +14,7 @@ import com.horstmann.violet.product.diagram.common.edge.LabeledLineEdge;
  */
 public class CompositionEdge extends LabeledLineEdge
 {
+	public static boolean Feature2=false;
     public CompositionEdge()
     {
         super();
@@ -52,7 +53,10 @@ public class CompositionEdge extends LabeledLineEdge
     @Override
 	public boolean isBiDirectionalEdgeAllowed()
     {
+    	if(Feature2) {
         return false;
+    	}
+    	return true;
     }
     
     

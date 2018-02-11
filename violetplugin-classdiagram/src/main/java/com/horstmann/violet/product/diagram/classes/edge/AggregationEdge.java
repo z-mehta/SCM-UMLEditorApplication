@@ -13,6 +13,7 @@ import com.horstmann.violet.product.diagram.common.edge.LabeledLineEdge;
  */
 public class AggregationEdge extends LabeledLineEdge
 {
+	public static boolean Feature2=false;
     public AggregationEdge()
     {
         super();
@@ -47,9 +48,13 @@ public class AggregationEdge extends LabeledLineEdge
         return ClassDiagramConstant.CLASS_DIAGRAM_RESOURCE.getString("tooltip.aggregation_edge");
     }
     @Override
+    
+
     public boolean isBiDirectionalEdgeAllowed()
     {
+    	if(Feature2) {
         return false;
     }
-    
+    	 return true;
+    }
 }

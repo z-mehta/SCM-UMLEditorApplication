@@ -14,6 +14,7 @@ import com.horstmann.violet.product.diagram.common.edge.LabeledLineEdge;
  */
 public class AssociationEdge extends LabeledLineEdge
 {
+	public static boolean Feature2=false;
     public AssociationEdge()
     {
         super();
@@ -50,7 +51,10 @@ public class AssociationEdge extends LabeledLineEdge
     @Override
     public boolean isBiDirectionalEdgeAllowed()
     {
-        return false;
-    }
+    	if(Feature2) {
+            return false;
+        	}
+        	return true;
+        }
     
 }
