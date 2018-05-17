@@ -5,5 +5,40 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="Python 3.6.5 (C:\Users\ZUBINMEHTA\AppData\Local\Programs\Python\Python36-32\python.exe) interpreter library">
+      <CLASSES>
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/DLLs" />
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib" />
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32" />
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages" />
+        <root url="file://$USER_HOME$/.IntelliJIdea2017.1/system/python_stubs/-1977972004" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.6" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.5" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.4" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/2and3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/third_party/3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/third_party/2and3" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/DLLs" />
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib" />
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32" />
+        <root url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages" />
+        <root url="file://$USER_HOME$/.IntelliJIdea2017.1/system/python_stubs/-1977972004" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.6" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.5" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.4" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3.3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/2and3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/third_party/3" />
+        <root url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/third_party/2and3" />
+      </SOURCES>
+    </library>
   </component>
 </application>
