@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="tweet.java" type="PLAIN_TEXT" />
       <mapping ext="rar" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
