@@ -1,0 +1,6 @@
+<application>
+  <component name="sequencePlugin">
+    <option name="SHOW_CALL_NUMBERS" value="false" />
+    <option name="SHOW_SIMPLIFY_CALL_NAME" value="false" />
+  </component>
+</application>
