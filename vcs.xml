@@ -130,6 +130,10 @@
           <option name="url" value="https://git-wip-us.apache.org/repos/asf/isis.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/paultuckey/urlrewritefilter.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\project\" />
