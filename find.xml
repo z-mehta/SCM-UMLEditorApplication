@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project Files" />
-    <option name="defaultScopeName" value="Project Files" />
-    <option name="SEARCH_SCOPE" value="Project Files" />
+    <option name="customScope" value="File '[Design Patterns] - ...\src\main\java\AbstractFactory\sort\impl\TypeOfSort.java'" />
+    <option name="defaultScopeName" value="File '[Design Patterns] - ...\src\main\java\AbstractFactory\sort\impl\TypeOfSort.java'" />
+    <option name="SEARCH_SCOPE" value="File '[Design Patterns] - ...\src\main\java\AbstractFactory\sort\impl\TypeOfSort.java'" />
   </component>
 </application>
