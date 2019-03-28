@@ -142,6 +142,10 @@
           <option name="url" value="git://git.eclipse.org/gitroot/tycho/org.eclipse.tycho.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/nicoulaj/checksum-maven-plugin.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\project\" />
